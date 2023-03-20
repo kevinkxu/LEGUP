@@ -1,6 +1,9 @@
 package edu.rpi.legup.ui;
 import org.xml.sax.*;
 import org.xml.sax.helpers.*;
+
+import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.JFileChooser;
 import javax.xml.parsers.*;
 import edu.rpi.legup.app.GameBoardFacade;
 import edu.rpi.legup.app.LegupPreferences;
@@ -382,22 +385,39 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
         LegupPreferences preferences = LegupPreferences.getInstance();
         String preferredDirectory = preferences.getUserPref(LegupPreferences.WORK_DIRECTORY);
 
-        fileDialog.setMode(FileDialog.LOAD);
-        fileDialog.setTitle("Select Proof File");
-        fileDialog.setDirectory(preferredDirectory);
-        fileDialog.setVisible(true);
+        File preferredDirectoryFile = new File(preferences.getUserPref(LegupPreferences.WORK_DIRECTORY));
+        JFileChooser fileBrowser = new JFileChooser(preferredDirectoryFile);
+
+//        fileDialog.setMode(FileDialog.LOAD);
+//        fileDialog.setTitle("Select Proof File");
+//        fileDialog.setDirectory(preferredDirectory);
+//        fileDialog.setVisible(true);
         String fileName = null;
         File puzzleFile = null;
 
-        if (fileDialog.getDirectory() != null && fileDialog.getFile() != null) {
-            fileName = fileDialog.getDirectory() + File.separator + fileDialog.getFile();
-            puzzleFile = new File(fileName);
+        fileBrowser.showOpenDialog(this);
+        fileBrowser.setVisible(true);
+        fileBrowser.setCurrentDirectory(new File(LegupPreferences.WORK_DIRECTORY));
+        fileBrowser.setDialogTitle("Select Proof File");
+        fileBrowser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        fileBrowser.setAcceptAllFileFilterUsed(false);
+
+        File folder = fileBrowser.getSelectedFile();
+
+        if (folder != null) {
+//        if (fileDialog.getDirectory() != null && fileDialog.getFile() != null) {
+//            fileName = fileDialog.getDirectory() + File.separator + fileDialog.getFile();
+            File resultFile = new File(folder.getAbsolutePath() + File.separator +"result.csv");
+//            puzzleFile = new File(fileName);
+            puzzleFile = resultFile;
         }
         else {
             // The attempt to prompt a puzzle ended gracefully (cancel)
+            System.out.println("cancel");
             return null;
         }
-
+        System.out.println(puzzleFile);
+        System.out.println(fileName);
         return new Object[]{fileName, puzzleFile};
     }
 
