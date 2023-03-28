@@ -374,7 +374,7 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
         LegupPreferences preferences = LegupPreferences.getInstance();
         String preferredDirectory = preferences.getUserPref(LegupPreferences.WORK_DIRECTORY);
 
-        File preferredDirectoryFile = new File(preferences.getUserPref(LegupPreferences.WORK_DIRECTORY));
+        File preferredDirectoryFile = new File(preferredDirectory);
         JFileChooser fileBrowser = new JFileChooser(preferredDirectoryFile);
         String fileName = null;
         File puzzleFile = null;
