@@ -368,9 +368,6 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
             }
         }
 
-        if (fileDialog == null) {
-            fileDialog = new FileDialog(this.frame);
-        }
         LegupPreferences preferences = LegupPreferences.getInstance();
         String preferredDirectory = preferences.getUserPref(LegupPreferences.WORK_DIRECTORY);
 
