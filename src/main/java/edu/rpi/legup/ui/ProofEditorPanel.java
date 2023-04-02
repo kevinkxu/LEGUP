@@ -480,6 +480,33 @@ public class ProofEditorPanel extends LegupPanel implements IHistoryListener {
             fileName = fileDialog.getDirectory() + File.separator + fileDialog.getFile();
         }
 
+//        LegupPreferences preferences = LegupPreferences.getInstance();
+//        String preferredDirectory = preferences.getUserPref(LegupPreferences.WORK_DIRECTORY);
+//
+//        File preferredDirectoryFile = new File(preferredDirectory);
+//        JFileChooser fileBrowser = new JFileChooser(preferredDirectoryFile);
+//        String fileName = null;
+//        File puzzleFile = null;
+//
+//        int saveFile = fileBrowser.showSaveDialog(this);
+//        fileBrowser.setVisible(true);
+//        fileBrowser.setCurrentDirectory(new File(LegupPreferences.WORK_DIRECTORY));
+//        fileBrowser.setDialogTitle("Save Proof As");
+//        fileBrowser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+//        fileBrowser.setAcceptAllFileFilterUsed(false);
+//
+//        File puzzlePath = fileBrowser.getSelectedFile();
+//        System.out.println(puzzlePath.getAbsolutePath());
+
+        if (puzzlePath != null) {
+            fileName = puzzlePath.getAbsolutePath();
+            puzzleFile = puzzlePath;
+        }
+        else {
+            // The attempt to prompt a puzzle ended gracefully (cancel)
+            return null;
+        }
+
         if (fileName != null) {
             try {
                 PuzzleExporter exporter = puzzle.getExporter();
