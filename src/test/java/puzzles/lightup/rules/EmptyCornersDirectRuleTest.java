@@ -42,6 +42,10 @@ public class EmptyCornersDirectRuleTest {
         cell2.setData(LightUpCellType.EMPTY.value);
         board.addModifiedData(cell2);
 
+        LightUpCell cell3 = board.getCell(4,2);
+        cell3.setData(LightUpCellType.EMPTY.value);
+        board.addModifiedData(cell3);
+
         //confirm there is a logical following of the EmptyCorners rule
         Assert.assertNull(RULE.checkRule(transition));
 
