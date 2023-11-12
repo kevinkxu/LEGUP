@@ -34,17 +34,20 @@ public class FinishWithEmptyDirectRuleTest {
         //get board state
         LightUpBoard board = (LightUpBoard) transition.getBoard();
 
-        //change the board's cells considering the FinishWithBulbs rule to empty
         LightUpCell cell1 = board.getCell(1,2);
-        cell1.setData(LightUpCellType.BULB.value);
+        cell1.setData(LightUpCellType.EMPTY.value);
         board.addModifiedData(cell1);
 
         LightUpCell cell2 = board.getCell(0,1);
-        cell2.setData(LightUpCellType.BULB.value);
+        cell2.setData(LightUpCellType.EMPTY.value);
         board.addModifiedData(cell2);
 
         LightUpCell cell3 = board.getCell(2,1);
-        cell3.setData(LightUpCellType.BULB.value);
+        cell3.setData(LightUpCellType.EMPTY.value);
+        board.addModifiedData(cell3);
+
+        LightUpCell cell3 = board.getCell(1,2);
+        cell3.setData(LightUpCellType.EMPTY.value);
         board.addModifiedData(cell3);
 
         //confirm there is a logical following of the FinishWithBulbs rule
@@ -55,7 +58,7 @@ public class FinishWithEmptyDirectRuleTest {
         for (int i = 0; i < board.getHeight(); i++) {
             for (int j = 0; j < board.getWidth(); j++) {
                 c = board.getCell(j, i);
-                if ((i == 1 && j == 2) || (i == 2 && j == 1) || (i == 1 && j == 0)){
+                if ((i == 1 && j == 2) || (i == 2 && j == 1) || (i == 1 && j == 0) || (i == 0 && j == 1)){
                     //logically follows
                     Assert.assertNull(RULE.checkRuleAt(transition, c));
                 }
