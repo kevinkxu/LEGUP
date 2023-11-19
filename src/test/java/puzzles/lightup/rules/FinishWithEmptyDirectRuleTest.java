@@ -22,11 +22,9 @@ public class FinishWithEmptyDirectRuleTest {
         lightUp = new LightUp();
     }
 
-    //even though this test isnt a completely filled board because it is unsolveable,
-    //it tests FinishBulbs properly
     @Test
-    public void FinishEmptyTestWithThree() throws InvalidFileFormatException {
-        TestUtilities.importTestBoard("puzzles/lightup/rules/FinishWithBulbsDirectRule/FinishWithBulbsWithThree", lightUp);
+    public void FinishEmptyTestWithAllZero() throws InvalidFileFormatException {
+        TestUtilities.importTestBoard("puzzles/lightup/rules/FinishWithEmptyDirectRule/FinishWithEmptyWithZero", lightUp);
         TreeNode rootNode = lightUp.getTree().getRootNode();
         TreeTransition transition = rootNode.getChildren().get(0);
         transition.setRule(RULE);
@@ -49,6 +47,44 @@ public class FinishWithEmptyDirectRuleTest {
         LightUpCell cell3 = board.getCell(1,2);
         cell3.setData(LightUpCellType.EMPTY.value);
         board.addModifiedData(cell3);
+
+        //confirm there is a logical following of the FinishWithBulbs rule
+        Assert.assertNull(RULE.checkRule(transition));
+
+        //check every square for logical following
+        LightUpCell c;
+        for (int i = 0; i < board.getHeight(); i++) {
+            for (int j = 0; j < board.getWidth(); j++) {
+                c = board.getCell(j, i);
+                if ((i == 1 && j == 2) || (i == 2 && j == 1) || (i == 1 && j == 0) || (i == 0 && j == 1)){
+                    //logically follows
+                    Assert.assertNull(RULE.checkRuleAt(transition, c));
+                }
+                else {
+                    //does not use the rule to logically follow
+                    Assert.assertNotNull(RULE.checkRuleAt(transition, c));
+                }
+            }
+        }
+    }
+
+    @Test
+    public void FinishEmptyTestWithSomeZero() throws InvalidFileFormatException {
+        TestUtilities.importTestBoard("puzzles/lightup/rules/FinishWithEmptyDirectRule/FinishWithEmptyWithOneUnfinished", lightUp);
+        TreeNode rootNode = lightUp.getTree().getRootNode();
+        TreeTransition transition = rootNode.getChildren().get(0);
+        transition.setRule(RULE);
+
+        //get board state
+        LightUpBoard board = (LightUpBoard) transition.getBoard();
+
+        LightUpCell cell1 = board.getCell(1,2);
+        cell1.setData(LightUpCellType.EMPTY.value);
+        board.addModifiedData(cell1);
+
+        LightUpCell cell2 = board.getCell(0,1);
+        cell2.setData(LightUpCellType.EMPTY.value);
+        board.addModifiedData(cell2);
 
         //confirm there is a logical following of the FinishWithBulbs rule
         Assert.assertNull(RULE.checkRule(transition));
