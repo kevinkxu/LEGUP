@@ -5,10 +5,10 @@
         <board height="3" width="3">
             <cells>
                 <cell value="-4" x="1" y="0"/>
-                <cell value="1" x="1" y="1"/>
-				<cell value="-4" x="0" y="1"/>
+                <cell value="-4" x="0" y="1"/>
+                <cell value="2" x="1" y="1"/>
             </cells>
         </board>
     </puzzle>
-    <solved isSolved="false" lastSaved="2023-11-18 22:56:58"/>
+    <solved isSolved="false" lastSaved="2023-12-02 16:06:27"/>
 </Legup>

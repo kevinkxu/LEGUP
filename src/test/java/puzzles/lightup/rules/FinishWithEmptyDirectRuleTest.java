@@ -23,8 +23,8 @@ public class FinishWithEmptyDirectRuleTest {
     }
 
     @Test
-    public void FinishEmptyTestWithAllZero() throws InvalidFileFormatException {
-        TestUtilities.importTestBoard("puzzles/lightup/rules/FinishWithEmptyDirectRule/FinishWithEmptyWithZero", lightUp);
+    public void FinishEmptyTestWith4() throws InvalidFileFormatException {
+        TestUtilities.importTestBoard("puzzles/lightup/rules/FinishWithEmptyDirectRule/FinishWithEmptyWith4", lightUp);
         TreeNode rootNode = lightUp.getTree().getRootNode();
         TreeTransition transition = rootNode.getChildren().get(0);
         transition.setRule(RULE);
@@ -44,9 +44,9 @@ public class FinishWithEmptyDirectRuleTest {
         cell3.setData(LightUpCellType.EMPTY.value);
         board.addModifiedData(cell3);
 
-        LightUpCell cell3 = board.getCell(1,2);
+        LightUpCell cell4 = board.getCell(1,0);
         cell3.setData(LightUpCellType.EMPTY.value);
-        board.addModifiedData(cell3);
+        board.addModifiedData(cell4);
 
         //confirm there is a logical following of the FinishWithBulbs rule
         Assert.assertNull(RULE.checkRule(transition));
@@ -69,7 +69,7 @@ public class FinishWithEmptyDirectRuleTest {
     }
 
     @Test
-    public void FinishEmptyTestWithSomeZero() throws InvalidFileFormatException {
+    public void FinishEmptyTestWithOneUnifinished() throws InvalidFileFormatException {
         TestUtilities.importTestBoard("puzzles/lightup/rules/FinishWithEmptyDirectRule/FinishWithEmptyWithOneUnfinished", lightUp);
         TreeNode rootNode = lightUp.getTree().getRootNode();
         TreeTransition transition = rootNode.getChildren().get(0);
@@ -78,13 +78,9 @@ public class FinishWithEmptyDirectRuleTest {
         //get board state
         LightUpBoard board = (LightUpBoard) transition.getBoard();
 
-        LightUpCell cell1 = board.getCell(1,2);
+        LightUpCell cell1 = board.getCell(2,1);
         cell1.setData(LightUpCellType.EMPTY.value);
         board.addModifiedData(cell1);
-
-        LightUpCell cell2 = board.getCell(0,1);
-        cell2.setData(LightUpCellType.EMPTY.value);
-        board.addModifiedData(cell2);
 
         //confirm there is a logical following of the FinishWithBulbs rule
         Assert.assertNull(RULE.checkRule(transition));
@@ -94,7 +90,7 @@ public class FinishWithEmptyDirectRuleTest {
         for (int i = 0; i < board.getHeight(); i++) {
             for (int j = 0; j < board.getWidth(); j++) {
                 c = board.getCell(j, i);
-                if ((i == 1 && j == 2) || (i == 2 && j == 1) || (i == 1 && j == 0) || (i == 0 && j == 1)){
+                if ((i == 2 && j == 1)){
                     //logically follows
                     Assert.assertNull(RULE.checkRuleAt(transition, c));
                 }
