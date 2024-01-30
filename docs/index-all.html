@@ -699,6 +699,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/ui/proofeditorui/rulesview/CaseRuleSelectionView.html#%3Cinit%3E(edu.rpi.legup.ui.proofeditorui.rulesview.RuleButton)">CaseRuleSelectionView(RuleButton)</a></span> - Constructor for class edu.rpi.legup.ui.proofeditorui.rulesview.<a href="edu/rpi/legup/ui/proofeditorui/rulesview/CaseRuleSelectionView.html" title="class in edu.rpi.legup.ui.proofeditorui.rulesview">CaseRuleSelectionView</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/rpi/legup/model/gameboard/PuzzleElement.html#casesDepended">casesDepended</a></span> - Variable in class edu.rpi.legup.model.gameboard.<a href="edu/rpi/legup/model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="edu/rpi/legup/puzzle/skyscrapers/rules/CellForNumberCaseRule.html" title="class in edu.rpi.legup.puzzle.skyscrapers.rules"><span class="typeNameLink">CellForNumberCaseRule</span></a> - Class in <a href="edu/rpi/legup/puzzle/skyscrapers/rules/package-summary.html">edu.rpi.legup.puzzle.skyscrapers.rules</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/skyscrapers/rules/CellForNumberCaseRule.html#%3Cinit%3E()">CellForNumberCaseRule()</a></span> - Constructor for class edu.rpi.legup.puzzle.skyscrapers.rules.<a href="edu/rpi/legup/puzzle/skyscrapers/rules/CellForNumberCaseRule.html" title="class in edu.rpi.legup.puzzle.skyscrapers.rules">CellForNumberCaseRule</a></dt>
@@ -2025,6 +2027,46 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">DeleteTreeElementCommand Constructor creates a PuzzleCommand for deleting a tree puzzleElement</div>
 </dd>
+<dt><span class="memberNameLink"><a href="edu/rpi/legup/model/rules/CaseRule.html#dependentElements(edu.rpi.legup.model.gameboard.Board,edu.rpi.legup.model.gameboard.PuzzleElement)">dependentElements(Board, PuzzleElement)</a></span> - Method in class edu.rpi.legup.model.rules.<a href="edu/rpi/legup/model/rules/CaseRule.html" title="class in edu.rpi.legup.model.rules">CaseRule</a></dt>
+<dd>
+<div class="block">Returns the elements necessary for the cases returned by getCases(board,puzzleElement) to be valid
+ Overridden by case rules dependent on more than just the modified data</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/lightup/rules/SatisfyNumberCaseRule.html#dependentElements(edu.rpi.legup.model.gameboard.Board,edu.rpi.legup.model.gameboard.PuzzleElement)">dependentElements(Board, PuzzleElement)</a></span> - Method in class edu.rpi.legup.puzzle.lightup.rules.<a href="edu/rpi/legup/puzzle/lightup/rules/SatisfyNumberCaseRule.html" title="class in edu.rpi.legup.puzzle.lightup.rules">SatisfyNumberCaseRule</a></dt>
+<dd>
+<div class="block">Returns the elements necessary for the cases returned by getCases(board,puzzleElement) to be valid
+ Overridden by case rules dependent on more than just the modified data</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/shorttruthtable/rules/caserule/CaseRule_GenericStatement.html#dependentElements(edu.rpi.legup.model.gameboard.Board,edu.rpi.legup.model.gameboard.PuzzleElement)">dependentElements(Board, PuzzleElement)</a></span> - Method in class edu.rpi.legup.puzzle.shorttruthtable.rules.caserule.<a href="edu/rpi/legup/puzzle/shorttruthtable/rules/caserule/CaseRule_GenericStatement.html" title="class in edu.rpi.legup.puzzle.shorttruthtable.rules.caserule">CaseRule_GenericStatement</a></dt>
+<dd>
+<div class="block">Returns the elements necessary for the cases returned by getCases(board,puzzleElement) to be valid
+ Overridden by case rules dependent on more than just the modified data</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/skyscrapers/rules/CellForNumberCaseRule.html#dependentElements(edu.rpi.legup.model.gameboard.Board,edu.rpi.legup.model.gameboard.PuzzleElement)">dependentElements(Board, PuzzleElement)</a></span> - Method in class edu.rpi.legup.puzzle.skyscrapers.rules.<a href="edu/rpi/legup/puzzle/skyscrapers/rules/CellForNumberCaseRule.html" title="class in edu.rpi.legup.puzzle.skyscrapers.rules">CellForNumberCaseRule</a></dt>
+<dd>
+<div class="block">Returns the elements necessary for the cases returned by getCases(board,puzzleElement) to be valid
+ Overridden by case rules dependent on more than just the modified data</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/skyscrapers/rules/NumberForCellCaseRule.html#dependentElements(edu.rpi.legup.model.gameboard.Board,edu.rpi.legup.model.gameboard.PuzzleElement)">dependentElements(Board, PuzzleElement)</a></span> - Method in class edu.rpi.legup.puzzle.skyscrapers.rules.<a href="edu/rpi/legup/puzzle/skyscrapers/rules/NumberForCellCaseRule.html" title="class in edu.rpi.legup.puzzle.skyscrapers.rules">NumberForCellCaseRule</a></dt>
+<dd>
+<div class="block">Returns the elements necessary for the cases returned by getCases(board,puzzleElement) to be valid
+ Overridden by case rules dependent on more than just the modified data</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/treetent/rules/FillinRowCaseRule.html#dependentElements(edu.rpi.legup.model.gameboard.Board,edu.rpi.legup.model.gameboard.PuzzleElement)">dependentElements(Board, PuzzleElement)</a></span> - Method in class edu.rpi.legup.puzzle.treetent.rules.<a href="edu/rpi/legup/puzzle/treetent/rules/FillinRowCaseRule.html" title="class in edu.rpi.legup.puzzle.treetent.rules">FillinRowCaseRule</a></dt>
+<dd>
+<div class="block">Returns the elements necessary for the cases returned by getCases(board,puzzleElement) to be valid
+ Overridden by case rules dependent on more than just the modified data</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/treetent/rules/LinkTentCaseRule.html#dependentElements(edu.rpi.legup.model.gameboard.Board,edu.rpi.legup.model.gameboard.PuzzleElement)">dependentElements(Board, PuzzleElement)</a></span> - Method in class edu.rpi.legup.puzzle.treetent.rules.<a href="edu/rpi/legup/puzzle/treetent/rules/LinkTentCaseRule.html" title="class in edu.rpi.legup.puzzle.treetent.rules">LinkTentCaseRule</a></dt>
+<dd>
+<div class="block">Returns the elements necessary for the cases returned by getCases(board,puzzleElement) to be valid
+ Overridden by case rules dependent on more than just the modified data</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/treetent/rules/LinkTreeCaseRule.html#dependentElements(edu.rpi.legup.model.gameboard.Board,edu.rpi.legup.model.gameboard.PuzzleElement)">dependentElements(Board, PuzzleElement)</a></span> - Method in class edu.rpi.legup.puzzle.treetent.rules.<a href="edu/rpi/legup/puzzle/treetent/rules/LinkTreeCaseRule.html" title="class in edu.rpi.legup.puzzle.treetent.rules">LinkTreeCaseRule</a></dt>
+<dd>
+<div class="block">Returns the elements necessary for the cases returned by getCases(board,puzzleElement) to be valid
+ Overridden by case rules dependent on more than just the modified data</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/ui/proofeditorui/treeview/TreeElementView.html#depth">depth</a></span> - Variable in class edu.rpi.legup.ui.proofeditorui.treeview.<a href="edu/rpi/legup/ui/proofeditorui/treeview/TreeElementView.html" title="class in edu.rpi.legup.ui.proofeditorui.treeview">TreeElementView</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/model/elements/Element.html#description">description</a></span> - Variable in class edu.rpi.legup.model.elements.<a href="edu/rpi/legup/model/elements/Element.html" title="class in edu.rpi.legup.model.elements">Element</a></dt>
@@ -3062,6 +3104,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Gets the possible cases at a specific location based on this case rule</div>
 </dd>
+<dt><span class="memberNameLink"><a href="edu/rpi/legup/model/gameboard/PuzzleElement.html#getCasesDepended()">getCasesDepended()</a></span> - Method in class edu.rpi.legup.model.gameboard.<a href="edu/rpi/legup/model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a></dt>
+<dd>
+<div class="block">Get the number of case rules that depend upon the state of this element</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/skyscrapers/rules/CellForNumberCaseRule.html#getCasesFor(edu.rpi.legup.model.gameboard.Board,edu.rpi.legup.model.gameboard.PuzzleElement,java.lang.Integer)">getCasesFor(Board, PuzzleElement, Integer)</a></span> - Method in class edu.rpi.legup.puzzle.skyscrapers.rules.<a href="edu/rpi/legup/puzzle/skyscrapers/rules/CellForNumberCaseRule.html" title="class in edu.rpi.legup.puzzle.skyscrapers.rules">CellForNumberCaseRule</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/shorttruthtable/ShortTruthTableStatement.html#getCell()">getCell()</a></span> - Method in class edu.rpi.legup.puzzle.shorttruthtable.<a href="edu/rpi/legup/puzzle/shorttruthtable/ShortTruthTableStatement.html" title="class in edu.rpi.legup.puzzle.shorttruthtable">ShortTruthTableStatement</a></dt>
@@ -3767,8 +3813,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/ui/ProofEditorPanel.html#getMenuBar()">getMenuBar()</a></span> - Method in class edu.rpi.legup.ui.<a href="edu/rpi/legup/ui/ProofEditorPanel.html" title="class in edu.rpi.legup.ui">ProofEditorPanel</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/skyscrapers/SkyscrapersBoard.html#getmodClue()">getmodClue()</a></span> - Method in class edu.rpi.legup.puzzle.skyscrapers.<a href="edu/rpi/legup/puzzle/skyscrapers/SkyscrapersBoard.html" title="class in edu.rpi.legup.puzzle.skyscrapers">SkyscrapersBoard</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/model/gameboard/Board.html#getModifiedData()">getModifiedData()</a></span> - Method in class edu.rpi.legup.model.gameboard.<a href="edu/rpi/legup/model/gameboard/Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a></dt>
 <dd>
 <div class="block">Gets the set of modified <a href="edu/rpi/legup/model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard"><code>PuzzleElement</code></a> of the board.</div>
@@ -4078,6 +4122,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/ui/proofeditorui/treeview/TreeViewSelection.html#getSelectedViews()">getSelectedViews()</a></span> - Method in class edu.rpi.legup.ui.proofeditorui.treeview.<a href="edu/rpi/legup/ui/proofeditorui/treeview/TreeViewSelection.html" title="class in edu.rpi.legup.ui.proofeditorui.treeview">TreeViewSelection</a></dt>
 <dd>
 <div class="block">Gets the list of selected tree puzzleElement views</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/rpi/legup/model/tree/TreeTransition.html#getSelection()">getSelection()</a></span> - Method in class edu.rpi.legup.model.tree.<a href="edu/rpi/legup/model/tree/TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a></dt>
+<dd>
+<div class="block">Gets he selected element associated with this transition</div>
 </dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/ui/boardview/BoardView.html#getSelection()">getSelection()</a></span> - Method in class edu.rpi.legup.ui.boardview.<a href="edu/rpi/legup/ui/boardview/BoardView.html" title="class in edu.rpi.legup.ui.boardview">BoardView</a></dt>
 <dd>
@@ -5835,6 +5883,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/skyscrapers/SkyscrapersController.html#mousePressed(java.awt.event.MouseEvent)">mousePressed(MouseEvent)</a></span> - Method in class edu.rpi.legup.puzzle.skyscrapers.<a href="edu/rpi/legup/puzzle/skyscrapers/SkyscrapersController.html" title="class in edu.rpi.legup.puzzle.skyscrapers">SkyscrapersController</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/treetent/TreeTentController.html#mousePressed(java.awt.event.MouseEvent)">mousePressed(MouseEvent)</a></span> - Method in class edu.rpi.legup.puzzle.treetent.<a href="edu/rpi/legup/puzzle/treetent/TreeTentController.html" title="class in edu.rpi.legup.puzzle.treetent">TreeTentController</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/ui/lookandfeel/animation/MaterialUITimer.html#mousePressed(java.awt.event.MouseEvent)">mousePressed(MouseEvent)</a></span> - Method in class edu.rpi.legup.ui.lookandfeel.animation.<a href="edu/rpi/legup/ui/lookandfeel/animation/MaterialUITimer.html" title="class in edu.rpi.legup.ui.lookandfeel.animation">MaterialUITimer</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/controller/BoardController.html#mouseReleased(java.awt.event.MouseEvent)">mouseReleased(MouseEvent)</a></span> - Method in class edu.rpi.legup.controller.<a href="edu/rpi/legup/controller/BoardController.html" title="class in edu.rpi.legup.controller">BoardController</a></dt>
@@ -5859,6 +5909,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/masyu/MasyuController.html#mouseReleased(java.awt.event.MouseEvent)">mouseReleased(MouseEvent)</a></span> - Method in class edu.rpi.legup.puzzle.masyu.<a href="edu/rpi/legup/puzzle/masyu/MasyuController.html" title="class in edu.rpi.legup.puzzle.masyu">MasyuController</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/skyscrapers/SkyscrapersController.html#mouseReleased(java.awt.event.MouseEvent)">mouseReleased(MouseEvent)</a></span> - Method in class edu.rpi.legup.puzzle.skyscrapers.<a href="edu/rpi/legup/puzzle/skyscrapers/SkyscrapersController.html" title="class in edu.rpi.legup.puzzle.skyscrapers">SkyscrapersController</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/treetent/TreeTentController.html#mouseReleased(java.awt.event.MouseEvent)">mouseReleased(MouseEvent)</a></span> - Method in class edu.rpi.legup.puzzle.treetent.<a href="edu/rpi/legup/puzzle/treetent/TreeTentController.html" title="class in edu.rpi.legup.puzzle.treetent">TreeTentController</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/ui/lookandfeel/animation/MaterialUITimer.html#mouseReleased(java.awt.event.MouseEvent)">mouseReleased(MouseEvent)</a></span> - Method in class edu.rpi.legup.ui.lookandfeel.animation.<a href="edu/rpi/legup/ui/lookandfeel/animation/MaterialUITimer.html" title="class in edu.rpi.legup.ui.lookandfeel.animation">MaterialUITimer</a></dt>
 <dd>&nbsp;</dd>
@@ -6983,6 +7035,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Sets the list of case rules</div>
 </dd>
+<dt><span class="memberNameLink"><a href="edu/rpi/legup/model/gameboard/PuzzleElement.html#setCasesDepended(int)">setCasesDepended(int)</a></span> - Method in class edu.rpi.legup.model.gameboard.<a href="edu/rpi/legup/model/gameboard/PuzzleElement.html" title="class in edu.rpi.legup.model.gameboard">PuzzleElement</a></dt>
+<dd>
+<div class="block">Sets the number of case rules that depend upon the state of this element</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/model/gameboard/GridBoard.html#setCell(int,int,edu.rpi.legup.model.elements.Element,java.awt.event.MouseEvent)">setCell(int, int, Element, MouseEvent)</a></span> - Method in class edu.rpi.legup.model.gameboard.<a href="edu/rpi/legup/model/gameboard/GridBoard.html" title="class in edu.rpi.legup.model.gameboard">GridBoard</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/model/gameboard/GridBoard.html#setCell(int,int,edu.rpi.legup.model.gameboard.GridCell)">setCell(int, int, GridCell)</a></span> - Method in class edu.rpi.legup.model.gameboard.<a href="edu/rpi/legup/model/gameboard/GridBoard.html" title="class in edu.rpi.legup.model.gameboard">GridBoard</a></dt>
@@ -7129,8 +7185,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/ui/PuzzleEditorPanel.html#setMenuBar()">setMenuBar()</a></span> - Method in class edu.rpi.legup.ui.<a href="edu/rpi/legup/ui/PuzzleEditorPanel.html" title="class in edu.rpi.legup.ui">PuzzleEditorPanel</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="edu/rpi/legup/puzzle/skyscrapers/SkyscrapersBoard.html#setModClue(edu.rpi.legup.puzzle.skyscrapers.SkyscrapersClue)">setModClue(SkyscrapersClue)</a></span> - Method in class edu.rpi.legup.puzzle.skyscrapers.<a href="edu/rpi/legup/puzzle/skyscrapers/SkyscrapersBoard.html" title="class in edu.rpi.legup.puzzle.skyscrapers">SkyscrapersBoard</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/model/gameboard/Board.html#setModifiable(boolean)">setModifiable(boolean)</a></span> - Method in class edu.rpi.legup.model.gameboard.<a href="edu/rpi/legup/model/gameboard/Board.html" title="class in edu.rpi.legup.model.gameboard">Board</a></dt>
 <dd>
 <div class="block">Sets the modifiable attribute for the board.</div>
@@ -7244,6 +7298,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/controller/ElementController.html#setSelectedElement(edu.rpi.legup.model.elements.Element)">setSelectedElement(Element)</a></span> - Method in class edu.rpi.legup.controller.<a href="edu/rpi/legup/controller/ElementController.html" title="class in edu.rpi.legup.controller">ElementController</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/rpi/legup/model/tree/TreeTransition.html#setSelection(edu.rpi.legup.model.gameboard.PuzzleElement)">setSelection(PuzzleElement)</a></span> - Method in class edu.rpi.legup.model.tree.<a href="edu/rpi/legup/model/tree/TreeTransition.html" title="class in edu.rpi.legup.model.tree">TreeTransition</a></dt>
+<dd>
+<div class="block">Sets the selected element associated with this transition</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/ui/proofeditorui/rulesview/RuleFrame.html#setSelectionByRule(edu.rpi.legup.model.rules.Rule)">setSelectionByRule(Rule)</a></span> - Method in class edu.rpi.legup.ui.proofeditorui.rulesview.<a href="edu/rpi/legup/ui/proofeditorui/rulesview/RuleFrame.html" title="class in edu.rpi.legup.ui.proofeditorui.rulesview">RuleFrame</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/rpi/legup/ui/proofeditorui/rulesview/RulePanel.html#setSelectionByRule(edu.rpi.legup.model.rules.Rule)">setSelectionByRule(Rule)</a></span> - Method in class edu.rpi.legup.ui.proofeditorui.rulesview.<a href="edu/rpi/legup/ui/proofeditorui/rulesview/RulePanel.html" title="class in edu.rpi.legup.ui.proofeditorui.rulesview">RulePanel</a></dt>
