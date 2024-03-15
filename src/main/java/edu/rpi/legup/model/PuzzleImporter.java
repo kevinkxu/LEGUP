@@ -69,7 +69,9 @@ public abstract class PuzzleImporter {
             boolean initProof = false;
             NodeList childNodes = puzzleElement.getChildNodes();
             for (int i = 0; i < childNodes.getLength(); i++) {
+//                System.out.println("XDD XDD XDD XDD XDD");
                 Node n = childNodes.item(i);
+//                System.out.println(n.getNodeName());
                 if (n.getNodeName().equalsIgnoreCase("board")) {
                     if (initBoard) {
                         throw new InvalidFileFormatException("Puzzle creation error: duplicate board puzzleElement found");

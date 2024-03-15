@@ -41,7 +41,7 @@ public class RippleEffectImporter extends PuzzleImporter {
             for (int x = 0; x < columns; x++) {
                 // new ripple effect cell
                 if (rippleEffectBoard.getCell(x, y) == null) {
-                    RippleEffectCell cell = new RippleEffectCell(RippleEffectCellType.EMPTY, new Point(x, y));
+                    RippleEffectCell cell = new RippleEffectCell(RippleEffectCellType.EMPTY.value, new Point(x, y));
                     cell.setIndex(y * columns + x);
                     cell.setModifiable(true);
                     rippleEffectBoard.setCell(x, y, cell);
@@ -60,7 +60,19 @@ public class RippleEffectImporter extends PuzzleImporter {
      */
     @Override
     public void initializeBoard(Node node) throws InvalidFileFormatException {
-        if (node == null) throw new InvalidFileFormatException("Invalid format");
+        try {
+            if (node == null) throw new InvalidFileFormatException("Invalid format");
+            if (!node.getNodeName().equalsIgnoreCase("board")) {
+                throw new InvalidFileFormatException("lightup Importer: cannot find board puzzleElement");
+            }
+            Element boardElement = (Element) node;
+
+
+        }
+        catch (NumberFormatException e) {
+            throw new InvalidFileFormatException("RippleEffect Importer: unknown value where integer expected");
+        }
+
     }
 
 
